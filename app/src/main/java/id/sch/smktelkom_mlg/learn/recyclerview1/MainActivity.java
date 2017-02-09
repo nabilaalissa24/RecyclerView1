@@ -5,6 +5,19 @@ import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    rawable[] arFoto = new Drawable[a.length()];
+    int i = 0;
+
+    {
+        arFoto[i] = a.getDrawable(i);
+        BitmapDrawable bd = (BitmapDrawable) a.getDrawable(i);
+        RoundedBitmapDrawable rbd =
+                RoundedBitmapDrawableFactory.create(getResources(), bd.getBitmap());
+        rbd.setCircular(true);
+        arFoto[i] = rbd;
+    }
+
+    for(
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    i<arFoto.length i
+    ++)
     private void fillData() {
         Resources resources = getResources();
         String[] arJudul = resources.getStringArray(R.array.places);
@@ -36,4 +51,6 @@ public class MainActivity extends AppCompatActivity {
         }
         mAdapter.notifyDataSetChanged();
     }
+
+    a.recycle()
 }
